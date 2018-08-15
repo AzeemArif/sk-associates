@@ -1,584 +1,909 @@
-{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+{% load static %}
+<html>
 <head>
-	<!-- Meta tags -->
-	<title>Photosnap a Photo Gallery Category Flat Bootstrap Responsive Website | Home :: w3layouts</title>
-	<meta name="keywords" content="Photosnap a Photography Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
-	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- stylesheets -->
+<title>Sk Associates</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Fetch Villa Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
     {% block css %}
-    <link rel="stylesheet" href="{% static 'css/custom.css' %} ">
-	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %} ">
-	<link rel="stylesheet" href="{% static ' css/font-awesome.css' %}">
-	<link rel="stylesheet" href="{% static 'css/chocolat.css' %}" type="text/css" media="screen">
-	<link rel="stylesheet" href="{% static 'css/style.css' %}">
-
-	<!-- google fonts  -->
-	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-	<link href="//fonts.googleapis.com/css?family=Raleway:400,500,600,700" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.css'%}" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/zoomslider.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="{% static 'js/modernizr-2.6.2.min.js' %}"></script>
+    <!--/web-fonts-->
+    <link href='//fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:400,300,300italic,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
     {% endblock %}
+<!--//web-fonts-->
 </head>
 <body>
- {% block content %}
-	<div class="banner" id="home">
-		<div class="navbar navbar-default w3ls-navbar">
-			<div class= "container brand1">
-				<a href="#" class="navbar-brand w3-logo"><img class="logo-setting" src="{% static 'images/logo.jpg' %}"></a>
-
-				<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<!-- navbar collapse -->
-				<div class="collapse navbar-collapse navHeaderCollapse">
-					<ul class="nav navbar-nav w3ls-nav">
-						<li><a class="scroll" href="#home">Home</a></li>
-						<li><a class="scroll" href="#about">About</a></li>
-						<li><a class="scroll" href="#gallery">Gallery</a></li>
-						<li><a class="scroll" href="#service">Service</a></li>
-						<!-- <li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Departments <b class="caret"></b></a>
-							<ul class="dropdown-menu">
-								<li><a href="#service">Arts</a></li>
-								<li><a href="#service">Science</a></li>
-								<li><a href="#service">Commerce</a></li>
-							</ul>
-						</li> -->
-						<li><a class="scroll" href="#contact">Contact</a></li>
+{% block content %}
+<!--/main-header-->
+<div class="top-main" id="home">
+   <div class="header-top">
+				<div class="w3l_header_left">
+					<ul>
+						<li><span class="fa fa-envelope" aria-hidden="true"></span> <a href="mailto:info@example.com">info@example.com</a></li>
+						<li><span class="fa fa-phone-square" aria-hidden="true"></span> (010) 221 918 811</li>
 					</ul>
-					<div class="agileinfo-social-grids">
-						<ul>
-							<li><a href="#"><span class="fa fa-facebook"></span></a></li>
-							<li><a href="#"><span class="fa fa-twitter"></span></a></li>
-							<li><a href="#"><span class="fa fa-rss"></span></a></li>
+				</div>
+				<div class="w3l_header_right">
+					<ul class="top-links">
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+							<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
 						</ul>
+
+				</div>
+				<div class="clearfix"> </div>
+   </div>
+   <div class="header-bottom">
+		<div class="container">
+			<nav class="navbar navbar-default">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+					<div class="logo">
+						<h1><a class="navbar-brand" href="index.html"><span class="one">F</span>etch<span class="one">V</span>illa</a></h1>
 					</div>
 				</div>
 
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+					<nav class="cl-effect-1" id="cl-effect-1">
+						<ul class="nav navbar-nav">
+							<li class="active"><a class="scroll" href="index.html">Home</a></li>
+							<li><a href="#projects" class="scroll hvr-bounce-to-bottom">Projects</a></li>
+							<li><a href="#team" class="scroll hvr-bounce-to-bottom">Team</a></li>
+							<li><a href="#gallery" class="scroll hvr-bounce-to-bottom">Gallery</a></li>
+							<li><a href="#contact" class="scroll hvr-bounce-to-bottom">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+				<!-- /.navbar-collapse -->
+			</nav>
+			<div class="w3ls_search">
+				<div class="cd-main-header">
+					<ul class="cd-header-buttons">
+						<li><a class="cd-search-trigger" href="#cd-search"> <span></span></a></li>
+					</ul> <!-- cd-header-buttons -->
+				</div>
+				<div id="cd-search" class="cd-search">
+					<form action="#" method="post">
+						<input name="Search" type="search" placeholder="Search...">
+					</form>
+				</div>
 			</div>
-
-
+	
 		</div>
-		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	</div>
+<!--/banner-section-->
+	<div id="demo-1" data-zs-src='["{% static 'images/1.jpg' %}", "{% static 'images/2.jpg' %}", "{% static 'images/3.jpg' %}","{% static 'images/4.jpg' %}"]' data-zs-overlay="dots">
+		<div class="demo-inner-content">
+			<!--/banner-info-->
+			   <div class="baner-info">
+			      <h3>Your <span>Edge</span> in <span>Real</span> Home</h3>
+				  <h4>Build Your Dream Villa</h4>
+				  <span><img src="{% static 'images/logo2.png' %}" alt=""></span>
+			   </div>
+			<!--/banner-ingo-->		
+		</div>
+    </div>
+<!--/banner-section-->
+</div>
+<!--/main-header-->
+<!-- /pop-->
+				<div class="modal ab fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog sign" role="document">
+					<div class="modal-content about">
+						<div class="modal-header one">
+							<button type="button" class="close sg" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>	
+								<div class="discount one">
+									<h3>A Few Words about Us</h3>
+									
+								</div>							
+						</div>
+						 <div class="modal-body about">
+								<img src="{% static 'images/v5.jpg' %}" alt="w3ls" class="img-responsive">
+							<h4>Lorem ipsum Nam libero tempore</h4>
+							<p>Lorem ipsum Nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere.Lorem Ipsum has been the industry's standard dummy text ever since.</p>
+							
+						 </div>
+
+								
+					</div>
+				</div>
+			</div>
+			<!-- //pop-->
+<!--/price-section-->
+<div class="price-section">
+     <div class="container">
+         <div class="col-md-6 price">
+				<h3><span>Search For Home</span></h3>
+				<div class="reservation">
+					<div class="section_room">
+						<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+						<select id="country" onchange="change_country(this.value)" class="frm-field required">
+							<option value="null">Location</option>
+							<option value="null">Denmark</option>         
+							<option value="AX">Sweden</option>
+							<option value="AX">New Zealand</option>
+							<option value="AX">America</option>
+							<option value="AX">Australia</option>
+						</select>
+					</div>	
+					<div class="section_room">
+						<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+						<select id="country1" onchange="change_country(this.value)" class="frm-field required">
+							<option value="null">Type of property</option>
+							<option value="null">Property1</option>         
+							<option value="AX">Property2</option>
+							<option value="AX">Property3</option>
+							<option value="AX">Property4</option>
+							<option value="AX">Property5</option>
+						</select>
+					</div>
+					<div class="reservation-grids">
+						<div class="reservation-grid-left">
+							<div class="section_room">
+								<span class="fa fa-bed" aria-hidden="true"> </span>
+								<select id="country2" onchange="change_country(this.value)" class="frm-field required">
+									<option value="null">Bedrooms</option>
+									<option value="null">1</option>         
+									<option value="AX">2</option>
+									<option value="AX">3</option>
+									<option value="AX">4</option>
+									<option value="AX">More</option>
+								</select>
+							</div>
+						</div>
+						<div class="reservation-grid-right">
+							<div class="section_room">
+								<span class="fa fa-wheelchair-alt" aria-hidden="true"> </span>
+								<select id="country3" onchange="change_country(this.value)" class="frm-field required">
+									<option value="null">Baths</option>
+									<option value="null">Any</option>         
+									<option value="AX">2</option>
+									<option value="AX">3</option>
+									<option value="AX">4</option>
+									<option value="AX">More</option>
+								</select>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="reservation-grids">
+						<div class="reservation-grid-left">
+							<div class="section_room">
+								<span class="glyphicon glyphicon-yen" aria-hidden="true"></span>
+								<select id="country2" onchange="change_country(this.value)" class="frm-field required">
+									<option value="null">Price From Min</option>
+									<option value="null">No Minimum</option>         
+									<option value="AX">1000Yen</option>
+									<option value="AX">3000Yen</option>
+									<option value="AX">4000Yen</option>
+									<option value="AX">5000Yen</option>
+								</select>
+							</div>
+						</div>
+						<div class="reservation-grid-right">
+							<div class="section_room">
+								<span class="glyphicon glyphicon-yen" aria-hidden="true"></span>
+								<select id="country3" onchange="change_country(this.value)" class="frm-field required">
+									<option value="null">Price From Max</option>
+									<option value="null">Any</option>         
+									<option value="AX">15000Yen</option>
+									<option value="AX">25000Yen</option>
+									<option value="AX">35000Yen</option>
+									<option value="AX">More</option>
+								</select>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="keywords">
+						<form action="#" method="post">
+							<span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+							<input type="text" name="Key Words" placeholder="Key Words" required=" ">
+							<input type="submit" value="Search">
+						</form>
+					</div>
+				</div>
+		</div>	
+		<div class="col-md-6 plat">
+		<div id="myCarousel1" class="carousel slide" data-ride="carousel" data-interval="2000" data-pause="hover">
 			<!-- Indicators -->
 			<ol class="carousel-indicators">
-				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-				<li data-target="#myCarousel" data-slide-to="1"></li>
-				<li data-target="#myCarousel" data-slide-to="2"></li>
+				<li data-target="#myCarousel1" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel1" data-slide-to="1"></li>
+				<li data-target="#myCarousel1" data-slide-to="2"></li>
 			</ol>
-			<!-- Wrapper for slides -->
-			<div class="carousel-inner">
-
+			<!-- Wrapper for slides -->	
+			<div class="carousel-inner" role="listbox">
 				<div class="item active">
-					<img src="{% static 'images/banner1.jpg' %}" alt="Los Angeles" style="width:100%;">
-					<div class="carousel-caption">
-						<h1>Lorem Ipsum Dolor Amet</h1>
-						<p>Contrary to popular belief Lorem Ipsum is not simply random text.</p>
+					<div class="serv-w3ls1">
+						
+							<img src="{% static 'images/v3.jpg' %}" alt="w3ls" class="img-responsive">
+						    <span class="four">40,000$</span>
+							<div class="rent-bottom">
+									<h4>Nerima Sanam St, Tokyo,TM 3020</h4>
+									<h5>For Rent</h5>
+									<p>Etiam elit felis, porta ut massa in, consectetur<p>
+									<div class="rent-icons">
+									  <h6 class="area">Area: 450m1</h6>
+									  <div class="r-icons">
+										   <ul class="icons-right">
+															<li><i class="fa fa-bed" aria-hidden="true"></i> 3</li>
+															<li><i class="fa fa-wheelchair-alt" aria-hidden="true"></i> 2</li>
+											</ul>
+									  </div>
+									  <div class="clearfix"></div>
+									</div>
+							</div>
+						
 					</div>
 				</div>
-
 				<div class="item">
-					<img src="{% static 'images/banner2.jpg' %}" alt="Chicago" style="width:100%;">
-					<div class="carousel-caption">
-						<h2>Lorem Ipsum Dolor Amet</h2>
-						<p>Contrary to popular belief Lorem Ipsum is not simply random text.</p>
+				<div class="serv-w3ls1">
+						
+							<img src="{% static 'images/v2.jpg' %}" alt="w3ls" class="img-responsive">
+						    <span class="four">50,000$</span>
+							<div class="rent-bottom">
+									<h4>Nerima Sanam St, Tokyo,TM 3020</h4>
+									<h5>For Rent</h5>
+									<p>Etiam elit felis, porta ut massa in, consectetur<p>
+									<div class="rent-icons">
+									  <h6 class="area">Area: 450m2</h6>
+									  <div class="r-icons">
+										   <ul class="icons-right">
+															<li><i class="fa fa-bed" aria-hidden="true"></i> 3</li>
+															<li><i class="fa fa-wheelchair-alt" aria-hidden="true"></i> 2</li>
+											</ul>
+									  </div>
+									  <div class="clearfix"></div>
+									</div>
+							</div>
+						
 					</div>
-				</div>
-
+				</div> 
 				<div class="item">
-					<img src="{% static 'images/banner3.jpg' %}" alt="New York" style="width:100%;">
-					<div class="carousel-caption">
-						<h2>Lorem Ipsum Dolor Amet</h2>
-						<p>Contrary to popular belief Lorem Ipsum is not simply random text.</p>
+					<div class="serv-w3ls1">
+						    <img src="{% static 'images/v1.jpg' %}" alt="w3ls" class="img-responsive">
+						    <span class="four">50,000$</span>
+							<div class="rent-bottom">
+									<h4>Nerima Sanam St, Tokyo,TM 3020</h4>
+									<h5>For Rent</h5>
+									<p>Etiam elit felis, porta ut massa in, consectetur<p>
+									<div class="rent-icons">
+									  <h6 class="area">Area: 450m3</h6>
+									  <div class="r-icons">
+										   <ul class="icons-right">
+															<li><i class="fa fa-bed" aria-hidden="true"></i> 3</li>
+															<li><i class="fa fa-wheelchair-alt" aria-hidden="true"></i> 2</li>
+											</ul>
+									  </div>
+									  <div class="clearfix"></div>
+									</div>
+							</div>
 					</div>
 				</div>
-
-			</div>
-
-			<!-- Left and right controls -->
-			<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-				<span class="fa fa-chevron-left"></span>
-				<span class="sr-only">Previous</span>
-			</a>
-			<a class="right carousel-control" href="#myCarousel" data-slide="next">
-				<span class="fa fa-chevron-right"></span>
-				<span class="sr-only">Next</span>
-			</a>
-		</div>
-
-
-	</div>
-<!-- about -->
-	<div class="agile-about" id="about">
-		<h3 class="center">About Us </h3>
-		<div class="container">
-			<img src="{% static 'images/gate_view.jpg' %}" class="img-responsive" alt="about image" />
-			<h4>Lorem ipsum dolor sit amet</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt</p>
-			<div class="skills-w3ls">
-				<div class="skill">
-					<h5>Photography</h5>
-					<p style="width:80%"><span>80<small>%</small></span></p>
-				</div>
-				<div class="skill">
-					<h5>Quality</h5>
-					<p style="width:90%"><span>90<small>%</small></span></p>
-				</div>
-				<div class="skill">
-					<h5>Editing</h5>
-					<p style="width:60%"><span>60<small>%</small></span></p>
-				</div>
-				<div class="skill">
-					<h5>Direction</h5>
-					<p style="width:55%"><span>55<small>%</small></span></p>
-				</div>
-			</div>
-		</div>
-	</div>
-<!-- //about -->
-<!-- testimonials -->
-	<div class="w3ls-testimonials" id="testimon">
-		<h3 class="center">What People Say About Us</h3>
-		<div class="container testimon1">
-			<div class="testimon-users">
-				<div class="photo">
-					<img class="img-responsive" src="{% static 'images/user.jpg' %}" alt="user-image" />
-					<div class="user-name">
-						<h4>Angelina Fernadez</h4>
-						<p class="designation">Fasion Designer</p>
-					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-				</div>
-			</div>
-			<div class="stats">
-				<div class="stats1">
-					<div class="box">
-						<span class="fa fa-camera-retro" aria-hidden="true"></span>
-						<h4><span class='numscroller' data-min='1' data-max='4200' data-delay='3' data-increment='10'>4200</span>+</h4>
-
-						<p>Photos</p>
-					</div>
-					<div class="box">
-						<span class="fa fa-rocket" aria-hidden="true"></span>
-						<h4><span class='numscroller' data-min='1' data-max='500' data-delay='3' data-increment='3'>500</span></h4>
-						<p>Projects</p>
-					</div>
-				</div>
-				<div class="stats2">
-					<div class="box">
-						<span class="fa fa-users" aria-hidden="true"></span>
-						<h4><span class='numscroller' data-min='1' data-max='700' data-delay='3' data-increment='3'>700</span></h4>
-						<p>Clients</p>
-					</div>
-					<div class="box">
-						<span class="fa fa-handshake-o" aria-hidden="true"></span>
-						<h4><span class='numscroller' data-min='1' data-max='200' data-delay='3' data-increment='3'>200</span></h4>
-						<p>Awards</p>
+				<div class="item">
+					<div class="serv-w3ls1">
+						
+							<img src="{% static 'images/v4.jpg' %}" alt="w3ls" class="img-responsive">
+						    <span class="four">30,000$</span>
+							<div class="rent-bottom">
+									<h4>Nerima Sanam St, Tokyo,TM 3020</h4>
+									<h5>For Rent</h5>
+									<p>Etiam elit felis, porta ut massa in, consectetur<p>
+									<div class="rent-icons">
+									  <h6 class="area">Area: 450m4</h6>
+									  <div class="r-icons">
+										    <ul class="icons-right">
+															<li><i class="fa fa-bed" aria-hidden="true"></i> 3</li>
+															<li><i class="fa fa-wheelchair-alt" aria-hidden="true"></i> 2</li>
+											</ul>
+									  </div>
+									  <div class="clearfix"></div>
+									</div>
+							</div>
+						
 					</div>
 				</div>
 			</div>
 		</div>
+			
 	</div>
-<!-- //testimonials -->
-<!--  gallery -->
-		<div data-target="gallery" id="gallery">
-            <div class="container">
-				<div class="portfolio w3ls-section" id="port">
-					<h3 class="center">Latest Works</h3>
-					<ul class="simplefilter">
-						<li class="active" data-filter="all" data-aos="slide-down">show all</li>
-						<li data-filter="1" data-aos="slide-down">Wild</li>
-						<li data-filter="2" data-aos="slide-down">Landscapes</li>
-						<li data-filter="3" data-aos="slide-down">Personal</li>
+	<div class="clearfix"> </div>
+	</div>	
+</div>
+
+<!--//price-section-->
+<!--/featured-projects-->
+<div class="featured-section" id="projects">
+  <div class="container">
+		<h3 class="tittle">Our <span>Featured </span> Projects</h3>
+			<div class="content-bottom-in">
+					<ul id="flexiselDemo1">			
+						<li><div class="project-fur">
+								<a href="#" data-toggle="modal" data-target="#myModal1" ><img class="img-responsive" src="images/v1.jpg" alt="" />	</a>
+									<div class="fur">
+										<div class="fur1">
+		                                    <span class="fur-money">$2.44 0 - $5.280 </span>
+		                                  <h6 class="fur-name"><a href="#" data-toggle="modal" data-target="#myModal1">Contrary to popular</a></h6>
+		                                   	<span>Paris</span>
+                               			</div>
+			                            <div class="fur2">
+			                               	<span>2 BHK</span>
+			                             </div>
+									</div>	
+									<span class="five">40,000$</span>									
+							</div></li>
+							<li><div class="project-fur">
+									<a href="#" data-toggle="modal" data-target="#myModal1" ><img class="img-responsive" src="images/v2.jpg" alt="" />	</a>
+										<div class="fur">
+											<div class="fur1">
+			                                    <span class="fur-money">$2.44 0 - $5.280 </span>
+			                                   <h6 class="fur-name"><a href="#" data-toggle="modal" data-target="#myModal1">Contrary to popular</a></h6>
+			                                   	<span>Paris</span>
+	                               			</div>
+				                            <div class="fur2">
+				                               	<span>2 BHK</span>
+				                             </div>
+										</div>	
+									<span class="five">45,000$</span>											
+								</div>
+								</li>
+								<li><div class="project-fur">
+								<a href="#" data-toggle="modal" data-target="#myModal1" ><img class="img-responsive" src="images/v3.jpg" alt="" />	</a>
+									<div class="fur">
+										<div class="fur1">
+		                                    <span class="fur-money">$2.44 0 - $5.280 </span>
+		                                  <h6 class="fur-name"><a href="#" data-toggle="modal" data-target="#myModal1">Contrary to popular</a></h6>
+		                                   	<span>Paris</span>
+                               			</div>
+			                            <div class="fur2">
+			                               	<span>2 BHK</span>
+			                             </div>
+									</div>	
+								<span class="five">40,000$</span>											
+							</div></li>
+							<li><div class="project-fur">
+								<a href="#" data-toggle="modal" data-target="#myModal1" ><img class="img-responsive" src="images/v4.jpg" alt="" />	</a>
+									<div class="fur">
+										<div class="fur1">
+		                                    <span class="fur-money">$2.44 0 - $5.280 </span>
+		                                    <h6 class="fur-name"><a href="#" data-toggle="modal" data-target="#myModal1">Contrary to popular</a></h6>
+		                                   	<span>Paris</span>
+                               			</div>
+			                            <div class="fur2">
+			                               	<span>2 BHK</span>
+			                             </div>
+									</div>	
+									<span class="five">40,000$</span>										
+							    </div>
+							</li>
 					</ul>
-					<div class="scrollbar agileits-portfolio-scroll">
-						<div class="filtr-container">
-							<div class="filtr-item gallery-t" data-category="1, 3" data-sort="Busy streets">
-								 <a href="images/w1.jpg" class="b-link-stripe b-animate-go  thickbox">
-									<figure class="w3ls-gallery">
-										 <img src="{% static 'images/w1.jpg' %}" class="img-responsive" alt=" " />
-										 <figcaption class="w3layouts-caption">
-											<h3>Photosnap</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit incididunt.</p>
-										</figcaption>
-									</figure>
-								</a>
-							</div>
-							<div class="filtr-item" data-category="1, 3" data-sort="City wonders">
-								<a href="images/w2.jpg" class="b-link-stripe b-animate-go  thickbox">
-									<figure class="w3ls-gallery">
-										 <img src="{% static 'images/w2.jpg' %}" class="img-responsive" alt=" " />
-										 <figcaption class="w3layouts-caption">
-											<h3>Photosnap</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit incididunt.</p>
-										 </figcaption>
-									</figure>
-								</a>
-							</div>
-							<div class="filtr-item" data-category="2" data-sort="Luminous night">
-							   <a href="images/c.jpg" class="b-link-stripe b-animate-go  thickbox">
-									<figure class="w3ls-gallery">
-										 <img src="{% static 'images/c.jpg' %}" class="img-responsive" alt=" " />
-										 <figcaption class="w3layouts-caption">
-											<h3>Photosnap</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit incididunt.</p>
-										 </figcaption>
-									</figure>
-								</a>
-							</div>
-							<div class="filtr-item gallery-t" data-category="1, 3" data-sort="Busy streets">
-							   <a href="images/w3.jpg" class="b-link-stripe b-animate-go  thickbox">
-									<figure class="w3ls-gallery">
-										 <img src="{% static 'images/w3.jpg' %} " class="img-responsive" alt=" " />
-										 <figcaption class="w3layouts-caption">
-											<h3>Photosnap</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit incididunt.</p>
-										</figcaption>
-									</figure>
-								</a>
-							</div>
-							<div class="filtr-item" data-category="3" data-sort="In production">
-							   <a href="images/e.jpg" class="b-link-stripe b-animate-go  thickbox">
-									<figure class="w3ls-gallery">
-										 <img src="{% static 'images/e.jpg' %}" class="img-responsive" alt=" " />
-										 <figcaption class="w3layouts-caption">
-											<h3>Photosnap</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit incididunt.</p>
-										</figcaption>
-									</figure>
-								</a>
-							</div>
-							<div class="filtr-item" data-category="3, 2" data-sort="Industrial site">
-							  <a href="images/l1.jpg" class="b-link-stripe b-animate-go  thickbox">
-									<figure class="w3ls-gallery box">
-										 <img src="{% static 'images/l1.jpg' %}" class="img-responsive" alt=" " />
-										 <figcaption class="w3layouts-caption">
-											<h3>Photosnap</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit incididunt.</p>
-										</figcaption>
-									</figure>
-								</a>
-							</div>
-							<div class="filtr-item" data-category="2, 3" data-sort="Peaceful lake">
-								<a href="images/l2.jpg" class="b-link-stripe b-animate-go  thickbox">
-									<figure class="w3ls-gallery">
-									 <img src="{% static 'images/l2.jpg' %}" class="img-responsive" alt=" " />
-									 <figcaption class="w3layouts-caption">
-											<h3>Photosnap</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit incididunt.</p>
-											</figcaption>
-									</figure>
-								</a>
-							</div>
-							<div class="filtr-item gallery-t" data-category="1, 3" data-sort="Busy streets">
-								<a href="images/h.jpg" class="b-link-stripe b-animate-go  thickbox">
-									<figure class="w3ls-gallery">
-										 <img src="{% static 'images/h.jpg' %}" class="img-responsive" alt=" " />
-										 <figcaption class="w3layouts-caption">
-											<h3>Photosnap</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit incididunt.</p>
-										</figcaption>
-									</figure>
-								</a>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-					</div>
-				</div>
-			</div>
+
 		</div>
-	<!-- //gallery -->
-	<!-- Services -->
-	<div class="agile-service" id="service">
+	</div>
+</div>
+<!--//featured-projects-->
+  <!-- //Stats -->
+<div class="agitsworkw3ls" id="property">
+
+			<div class="col-md-6 agitsworkw3ls-grid ">
+       <h3 class="tittle two">Properties <span>For</span> Rent</h3>
+				<!-- Tabs -->
+				<div class="tabs">
+					<div class="sap_tabs">
+						<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
+							<ul class="resp-tabs-list">
+								<li class="resp-tab-item resp-tab-active" aria-controls="tab_item-0" role="tab"><span>CREATION</span></li>
+								<li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span>ANALYSIS</span></li>
+								<li class="resp-tab-item" aria-controls="tab_item-2" role="tab"><span>STRATEGY</span></li>
+								<div class="clearfix"></div>
+							</ul>
+
+							<div class="resp-tabs-container">
+								<h3 class="resp-accordion resp-tab-active" role="tab" aria-controls="tab_item-0"><span class="resp-arrow"></span>CREATION</h3><div class="tab-1 resp-tab-content resp-tab-content-active" aria-labelledby="tab_item-0" style="display:block">
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
+									
+								</div>
+								<h3 class="resp-accordion" role="tab" aria-controls="tab_item-1"><span class="resp-arrow"></span>ANALYSIS</h3><div class="tab-2 resp-tab-content" aria-labelledby="tab_item-1">
+									<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word.</p>
+									
+								</div>
+								<h3 class="resp-accordion" role="tab" aria-controls="tab_item-2"><span class="resp-arrow"></span>STRATEGY</h3><div class="tab-3 resp-tab-content" aria-labelledby="tab_item-2">
+									<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //Tabs -->
+
+			</div>
+
+			<div class="col-md-6 agitsworkw3ls-grid-2">
+			   <div class="info-imgs">
+			         <ul>
+					  <li>
+						  <div class="gallery-grid1">
+								<img src="{% static 'images/v5.jpg' %}" alt=" " class="img-responsive">
+								<div class="p-mask">
+										<h4>Fetch <span>Villa</span></h4>
+									<p>Neque porro quisquam est, qui dolorem ipsum.</p>
+								</div>
+							</div>
+					  </li>
+					   <li>
+					     <div class="gallery-grid1">
+							<img src="{% static 'images/v2.jpg'%}" alt=" " class="img-responsive">
+							<div class="p-mask">
+									<h4>Fetch <span>Villa</span></h4>
+								<p>Neque porro quisquam est, qui dolorem ipsum.</p>
+							</div>
+						</div>
+					   </li>
+						<li>
+						   <div class="gallery-grid1">
+							<img src="{% static 'images/v6.jpg' %}" alt=" " class="img-responsive">
+							<div class="p-mask">
+									<h4>Fetch <span>Villa</span></h4>
+								<p>Neque porro quisquam est, qui dolorem ipsum.</p>
+							</div>
+						</div>
+						</li>
+					    <li>
+						  <div class="gallery-grid1">
+							<img src="{% static 'images/v7.jpg' %}" alt=" " class="img-responsive">
+							<div class="p-mask">
+									<h4>Fetch <span>Villa</span></h4>
+								<p>Neque porro quisquam est, qui dolorem ipsum.</p>
+							</div>
+						</div>
+						</li>
+					 </ul>
+			   </div>
+				
+			</div>
+			<div class="clearfix"></div>
+
+		</div>
+	<!-- //Stats -->
+ <!--/team-->
+<div class="team" id="team">
+		     <div class="container">
+			 <h3 class="tittle">Our <span>Team </span></h3>
+			 <!--/about-section-->
+			   <div class="about-section agileits">
+				<div class="col-md-7 ab-left">
+				  <div class="grid">
+			        <div class="h-f">
+					<figure class="effect-jazz">
+					<img src="{% static 'images/t1.jpg' %}" alt="img25">
+						<figcaption>
+							<h4>Ander<span>son</span></h4>
+							<ul class="top-links two">
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+									<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+								</ul>
+							<p>
+							  MANAGER
+							</p>
+							
+						</figcaption>			
+					</figure>
+					
+				 </div>
+				 <div class="h-f">
+					<figure class="effect-jazz">
+						<img src="{% static 'images/t2.jpg' %}" alt="img25">
+						<figcaption>
+							<h4>Ed<span>wards</span></h4>
+							<ul class="top-links two">
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+									<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+								</ul>
+							<p>
+							  CEO
+							</p>
+							
+						</figcaption>			
+					</figure>
+					
+				 </div>
+				 <div class="clearfix"> </div>
+				 </div>
+			   </div>
+			   <div class="col-md-5 ab-text">
+			             <h4 class="tittle">About Us</h4>
+						  <p>Lorem ipsum Nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere.Lorem Ipsum has been the industry's standard dummy text ever since.</p>
+						  <div class="start">
+						     <a href="#" data-toggle="modal" data-target="#myModal1" class="hvr-bounce-to-bottom">Get Started</a>
+						  </div>
+
+					</div>
+					<div class="clearfix"> </div>
+			 </div>
+			  <!--//about-section-->
+			  <!--/about-section2-->
+			   <div class="about-section">
+			        <div class="col-md-5 ab-text two">
+			             <h4 class="tittle">Welcome</h4>
+						 <p>Lorem ipsum Nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere.Lorem Ipsum has been the industry's standard dummy text ever since.</p>
+						  <div class="start">
+						     <a href="#"data-toggle="modal" data-target="#myModal1" class="hvr-bounce-to-bottom">Get Started</a>
+						  </div>
+
+					</div>
+						<div class="col-md-7 ab-left">
+				  <div class="grid">
+			        <div class="h-f">
+					<figure class="effect-jazz">
+					<img src="{% static 'images/t4.jpg' %}" alt="img25">
+						<figcaption>
+							<h4>Chri<span>stopher</span></h4>
+							<ul class="top-links two">
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+									<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+								</ul>
+							<p>
+							  DIRECTOR
+							</p>
+							
+						</figcaption>			
+					</figure>
+					
+				 </div>
+				 <div class="h-f">
+					<figure class="effect-jazz">
+						<img src="{% static 'images/t3.jpg' %}" alt="img25">
+						<figcaption>
+							<h4>Andrew<span>Mark</span></h4>
+							 <ul class="top-links two">
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+									<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+								</ul>
+							<p>
+							   MANAGER
+							</p>
+						
+						</figcaption>			
+					</figure>
+					
+				 </div>
+				 <div class="clearfix"> </div>
+				 </div>
+			   </div>
+					<div class="clearfix"> </div>
+			 </div>
+			  <!--//about-section2-->
+			</div>
+	     </div>
+		  <!--/team-->
+			<!-- gallery -->
+	<div class="gallery agile" id="gallery">
 		<div class="container">
-			<div class="my-service">
-				<div class="service-img">
-					<img src="{% static 'images/c1.jpg' %}" alt="service-img" class="img-responsive" />
-				</div>
-				<div class="service-list">
-					<h3>Our Services</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit incididunt.</p>
-					<a href="#contact" class="scroll">Request Service</a>
-					<div class="service-box1">
-						<div class="box1">
-							<h5>Birthday Photography</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-							<a href="#" data-toggle="modal" data-target="#myModal1">View Details</a>
-								<!-- bootstrap-pop-up -->
-								<div class="modal video-modal fade" id="myModal1" tabindex="-1" role="dialog" >
-									<div class="modal-dialog" role="document">
-										<div class="modal-content">
-											<div class="modal-header">
-												Photosnap
-												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-											</div>
-											<section>
-												<div class="modal-body">
-													<img src="{% static 'images/j.jpg' %}" alt=" " class="img-responsive" />
-													<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-												</div>
-											</section>
-										</div>
-									</div>
-								</div>
-							<!-- //bootstrap-pop-up -->
+			<h3 class="tittle"> Our <span>Gallery</span></h3>
+			<div class="agile_gallery_grids w3-agile">
+				<ul class="clearfix demo">
+					<li>
+						<div class="gallery-grid1">
+							<img src="{% static 'images/v5.jpg' %}" alt=" " class="img-responsive" />
+							<div class="p-mask">
+									<h4>Fetch <span>Villa</span></h4>
+								<p>Neque porro quisquam est, qui dolorem ipsum.</p>
+							</div>
 						</div>
-						<div class="box1">
-							<h5>Marriage Photography</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-							<a href="#" data-toggle="modal" data-target="#myModal2">View Details</a>
-								<!-- bootstrap-pop-up -->
-								<div class="modal video-modal fade" id="myModal2" tabindex="-1" role="dialog">
-									<div class="modal-dialog" role="document">
-										<div class="modal-content">
-											<div class="modal-header">
-												Photosnap
-												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-											</div>
-											<section>
-												<div class="modal-body">
-													<img src="{% static 'images/j.jpg' %}" alt=" " class="img-responsive" />
-													<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-												</div>
-											</section>
-										</div>
-									</div>
-								</div>
-							<!-- //bootstrap-pop-up -->
+					</li>
+					<li>
+						<div class="gallery-grid1">
+							<img src="{% static 'images/v1.jpg' %}" alt=" " class="img-responsive" />
+							<div class="p-mask">
+								<h4>Fetch <span>Villa</span></h4>
+								<p>Neque porro quisquam est, qui dolorem ipsum.</p>
+							</div>
 						</div>
-					</div>
-					<div class="service-box2">
-						<div class="box1">
-							<h5>Wild Photography</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-							<a href="#" data-toggle="modal" data-target="#myModal3">View Details</a>
-								<!-- bootstrap-pop-up -->
-								<div class="modal video-modal fade" id="myModal3" tabindex="-1" role="dialog" >
-									<div class="modal-dialog" role="document">
-										<div class="modal-content">
-											<div class="modal-header">
-												Photosnap
-												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-											</div>
-											<section>
-												<div class="modal-body">
-													<img src="{% static 'images/j.jpg' %}" alt=" " class="img-responsive" />
-													<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-												</div>
-											</section>
-										</div>
-									</div>
-								</div>
-							<!-- //bootstrap-pop-up -->
+					</li>
+					<li>
+						<div class="gallery-grid1">
+							<img src="{% static 'images/v6.jpg' %}" alt=" " class="img-responsive" />
+							<div class="p-mask">
+							<h4>Fetch <span>Villa</span></h4>
+								<p>Neque porro quisquam est, qui dolorem ipsum.</p>
+							</div>
 						</div>
-						<div class="box1">
-							<h5>Fashion Photography</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-							<a href="#" data-toggle="modal" data-target="#myModal4">View Details</a>
-								<!-- bootstrap-pop-up -->
-								<div class="modal video-modal fade" id="myModal4" tabindex="-1" role="dialog" >
-									<div class="modal-dialog" role="document">
-										<div class="modal-content">
-											<div class="modal-header">
-												Photosnap
-												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-											</div>
-											<section>
-												<div class="modal-body">
-													<img src="{% static 'images/j.jpg' %}" alt=" " class="img-responsive" />
-													<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-												</div>
-											</section>
-										</div>
-									</div>
-								</div>
-							<!-- //bootstrap-pop-up -->
+					</li>
+					<li>
+						<div class="gallery-grid1">
+							<img src="{% static 'images/v3.jpg' %}" alt=" " class="img-responsive" />
+							<div class="p-mask">
+								<h4>Fetch <span>Villa</span></h4>
+								<p>Neque porro quisquam est, qui dolorem ipsum.</p>
+							</div>
 						</div>
-					</div>
-					<div class="service-box3">
-						<div class="box1">
-							<h5>Events Photography</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-							<a href="#" data-toggle="modal" data-target="#myModal5">View Details</a>
-								<!-- bootstrap-pop-up -->
-								<div class="modal video-modal fade" id="myModal5" tabindex="-1" role="dialog" >
-									<div class="modal-dialog" role="document">
-										<div class="modal-content">
-											<div class="modal-header">
-												Photosnap
-												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-											</div>
-											<section>
-												<div class="modal-body">
-													<img src="{% static 'images/j.jpg' %}" alt=" " class="img-responsive" />
-													<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-												</div>
-											</section>
-										</div>
-									</div>
-								</div>
-							<!-- //bootstrap-pop-up -->
+					</li>
+					<li>
+						<div class="gallery-grid1">
+							<img src="{% static 'images/v7.jpg' %}" alt=" " class="img-responsive" />
+							<div class="p-mask">
+									<h4>Fetch <span>Villa</span></h4>
+								<p>Neque porro quisquam est, qui dolorem ipsum.</p>
+							</div>
 						</div>
-						<div class="box1">
-							<h5>Personal Photography</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-							<a href="#" data-toggle="modal" data-target="#myModal6">View Details</a>
-								<!-- bootstrap-pop-up -->
-								<div class="modal video-modal fade" id="myModal6" tabindex="-1" role="dialog" >
-									<div class="modal-dialog" role="document">
-										<div class="modal-content">
-											<div class="modal-header">
-												Photosnap
-												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-											</div>
-											<section>
-												<div class="modal-body">
-													<img src="{% static 'images/j.jpg' %}" alt=" " class="img-responsive" />
-													<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-												</div>
-											</section>
-										</div>
-									</div>
-								</div>
-							<!-- //bootstrap-pop-up -->
+					</li>
+					<li>
+						<div class="gallery-grid1">
+							<img src="{% static 'images/v2.jpg' %}" alt=" " class="img-responsive" />
+							<div class="p-mask">
+									<h4>Fetch <span>Villa</span></h4>
+								<p>Neque porro quisquam est, qui dolorem ipsum.</p>
+							</div>
 						</div>
-					</div>
-				</div>
+					</li>
+					<li>
+						<div class="gallery-grid1">
+							<img src="{% static 'images/v8.jpg' %}" alt=" " class="img-responsive" />
+							<div class="p-mask">
+									<h4>Fetch <span>Villa</span></h4>
+								<p>Neque porro quisquam est, qui dolorem ipsum.</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="gallery-grid1">
+							<img src="{% static 'images/v4.jpg' %}" alt=" " class="img-responsive" />
+							<div class="p-mask">
+								<h4>Fetch <span>Villa</span></h4>
+								<p>Neque porro quisquam est, qui dolorem ipsum.</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="gallery-grid1">
+							<img src="{% static 'images/v1.jpg' %}" alt=" " class="img-responsive" />
+							<div class="p-mask">
+									<h4>Fetch <span>Villa</span></h4>
+								<p>Neque porro quisquam est, qui dolorem ipsum.</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="gallery-grid1">
+							<img src="{% static 'images/v2.jpg' %}" alt=" " class="img-responsive" />
+							<div class="p-mask">
+								<h4>Fetch <span>Villa</span></h4>
+								<p>Neque porro quisquam est, qui dolorem ipsum.</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="gallery-grid1">
+							<img src="{% static 'images/v3.jpg' %}" alt=" " class="img-responsive" />
+							<div class="p-mask">
+									<h4>Fetch <span>Villa</span></h4>
+								<p>Neque porro quisquam est, qui dolorem ipsum.</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="gallery-grid1">
+							<img src="{% static 'images/v4.jpg' %}" alt=" " class="img-responsive" />
+							<div class="p-mask">
+									<h4>Fetch <span>Villa</span></h4>
+								<p>Neque porro quisquam est, qui dolorem ipsum.</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+			
 			</div>
 		</div>
 	</div>
-	<!-- //Services -->
-
-	<!-- contact -->
-	<div class="w3-contact" id="contact">
-		<h3 class="center">Contact Us</h3>
-		<div class="container contact1">
-			<h3 class="center">Fill Your Details</h3>
-			<form action="/" method="post">
-				<div class="sect2">
-					<div class="details1">
-						<h4>Your Contact Details</h4>
-
-							<label>Name :</label>
-							<input type="text" name="name" placeholder="Your Name" required>
-							<label>Email :</label>
-							<input type="email" name="email" placeholder="Your Email" required>
-							<label>Phone:</label>
-							<input type="text" name="phone" placeholder="Mobile Number" required>
-
-
-
-					</div>
-					<div class="details2">
-						<h4>Your Address Details</h4>
-
-							<label>Country :</label>
-							<input type="text" name="country" placeholder="Your Country" required>
-							<label>State:</label>
-							<input type="text" name="state" placeholder="Your State" required>
-							<label>Pincode :</label>
-							<input type="text" name="pincode" placeholder="Your Pincode" required>
-
-
-					</div>
-
+<!-- //gallery -->
+<div class="contact-w3ls" id="contact">
+		<div class="container">
+			<h2>Sign up for our <span>Newsletter</span></h2>
+			<p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus 
+				tristique bibendum. Donec rutrum sed sem quis venenatis.</p>
+			<div class="footer-contact">
+				<form action="#" method="post">
+					<input type="text" name="Email" placeholder="Enter your email to update" required=" ">
+					<input type="submit" value="Subscribe">
+				</form>
+			</div>
+			<div class="footer-grids w3-agileits">
+				<div class="col-md-4 footer-grid">
+					<p><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> General Pvt 66, Dong Da
+						Hanoi, Vietnam.</p>
+					<p><a href="mailto:contact@example.com"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> contact@example.com</a></p>
+					<p><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>+0123 456 686</p>
 				</div>
-			<input type="submit" value="Submit Now"><br>
-			</form>
-		</div>
-		<div class="footer">
-			<div class="container">
-				<div class="menu">
-					<ul class="list">
+				<div class="col-md-2 footer-grid">
+					<ul>
+						
 						<li><a class="scroll" href="#home">Home</a></li>
-						<li><a class="scroll" href="#about">About</a></li>
+						<li><a class="scroll" href="#projects">Projects</a></li>
+						<li><a class="scroll" href="#team">Team</a></li>
+						<li><a class="scroll" href="#property">Properties</a></li>
 						<li><a class="scroll" href="#gallery">Gallery</a></li>
-						<li><a class="scroll" href="#service">Services</a></li>
-						<li><a class="scroll" href="#contact">Contact</a></li>
-					</ul>
-					<ul class="list-icons">
-						<li><a href="#"><span class="fa fa-facebook"></span></a></li>
-						<li><a href="#"><span class="fa fa-twitter"></span></a></li>
-						<li><a href="#"><span class="fa fa-google-plus"></span></a></li>
-						<li><a href="#"><span class="fa fa-pinterest-p"></span></a></li>
-						<li><a href="#"><span class="fa fa-vk"></span></a></li>
 					</ul>
 				</div>
-				<div class="menu1">
-					<ul class="list2">
-						<li>Quick Contact</li>
-						<li><span class="fa fa-envelope-o" aria-hidden="true"></span><a href="mailto:yourmailid@company.com">service@photosnap.com</a></li>
-						<li><span class="fa fa-volume-control-phone" aria-hidden="true"></span>1254-209-4652</li>
-					</ul>
+				<div class="col-md-3 footer-grid">
+					<div class="footer-grid1">
+						<div class="footer-grid1-left">
+							<a href="#"><img src="{% static 'images/v8.jpg' %}" alt=" " class="img-responsive"></a>
+						</div>
+						<div class="footer-grid1-right">
+							<a href="#">eveniet ut molesti</a>
+							
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="footer-grid1">
+						<div class="footer-grid1-left">
+							<a href="#"><img src="{% static 'images/v7.jpg' %}" alt=" " class="img-responsive"></a>
+						</div>
+						<div class="footer-grid1-right">
+							<a href="#">earum rerum tenet</a>
+							
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="footer-grid1">
+						<div class="footer-grid1-left">
+							<a href="#"><img src="{% static 'images/v1.jpg' %}" alt=" " class="img-responsive"></a>
+						</div>
+						<div class="footer-grid1-right">
+							<a href="#">maiores alias cons</a>
+							
+						</div>
+						<div class="clearfix"> </div>
+					</div>
 				</div>
+				<div class="col-md-3 footer-grid">
+					<div class="footer-grid-instagram">
+					<a href="#"><img src="{% static 'images/v5.jpg' %}" alt=" " class="img-responsive"></a>
+					</div>
+					<div class="footer-grid-instagram">
+					<a href="#"><img src="{% static 'images/v3.jpg' %}" alt=" " class="img-responsive"></a>
+					</div>
+					<div class="footer-grid-instagram">
+						<a href="#"><img src="{% static 'images/v2.jpg' %}" alt=" " class="img-responsive"></a>
+					</div>
+					<div class="footer-grid-instagram">
+					<a href="#"><img src="{% static 'images/v4.jpg' %}" alt=" " class="img-responsive"></a>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="clearfix"> </div>
 			</div>
-		</div>
-	</div>
-	<div class="agileits-w3layouts">
-		<div class="container">
-			<p>© 2017 Photosnap. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
-		</div>
-	</div>
-	<!-- //copyright -->
-	<!-- //contact -->
-	<!-- scripts -->
-	<script src="{% static 'js/jquery.min.js' %}"></script>
-	<script src="{% static 'js/bootstrap.js' %}"></script>
-	<script src="{% static 'js/numscroller-1.0.js' %}"></script>
-	<!-- here starts scrolling icon -->
-		<script type="text/javascript" src="{% static 'js/move-top.js' %}"></script>
-			<!-- smooth-scrolling-of-move-up -->
-		<script type="text/javascript">
-			$(document).ready(function() {
-				/*
-				var defaults = {
-					containerID: 'toTop', // fading element id
-					containerHoverID: 'toTopHover', // fading element hover id
-					scrollSpeed: 1200,
-					easingType: 'linear'
-				};
-				*/
+			<h3 class="text-center follow">Follow <span>Us</span></h3>
+				<ul class="social-icons1 agileinfo">
+					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+					<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+					<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+				</ul>	
+				<div class="w3agile_footer_copy">
+				    <p>© 2017 Fetch Villa. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+			</div>
+     </div>
+	
+</div>
 
-				$().UItoTop({ easingType: 'easeOutQuart' });
+		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 
-			});
-		</script>
-	<!-- //smooth-scrolling-of-move-up -->
-		<script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
-		<script type="text/javascript">
+<script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.zoomslider.min.js' %}"></script>
+		<!-- search-jQuery -->
+				<script src="{% static 'js/main.js' %}"></script>
+			<!-- //search-jQuery -->
+					<script type="text/javascript">
+						$(window).load(function() {
+							$("#flexiselDemo1").flexisel({
+								visibleItems:3,
+								animationSpeed: 1000,
+								autoPlay: true,
+								autoPlaySpeed: 3000,    		
+								pauseOnHover: true,
+								enableResponsiveBreakpoints: true,
+						    	responsiveBreakpoints: { 
+						    		portrait: { 
+						    			changePoint:480,
+						    			visibleItems: 1
+						    		}, 
+						    		landscape: { 
+						    			changePoint:640,
+						    			visibleItems: 2
+						    		},
+						    		tablet: { 
+						    			changePoint:768,
+						    			visibleItems: 2
+						    		}
+						    	}
+						    });
+						    
+						});
+			</script>
+			<script type="text/javascript" src="{% static 'js/jquery.flexisel.js' %}"></script>
+
+	<!-- Horizontal-Tabs-JavaScript -->
+				<script src="{% static 'js/easyResponsiveTabs.js' %}" type="text/javascript"></script>
+				<script type="text/javascript">
+					$(document).ready(function () {
+						$('#horizontalTab').easyResponsiveTabs({
+							type: 'default',
+							width: 'auto',
+							fit: true,
+						});
+					});
+				</script>
+			<!-- Horizontal-Tabs-JavaScript -->
+			<script src="{% static 'js/jquery.picEyes.js' %}"></script>
+				<script>
+					$(function(){
+						//picturesEyes($('.demo li'));
+						$('.demo li').picEyes();
+					});
+				</script>
+				<!--start-smooth-scrolling-->
+<!--/script-->
+<script type="text/javascript" src="{% static 'js/move-top.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
+
+<script type="text/javascript">
 			jQuery(document).ready(function($) {
-				$(".scroll").click(function(event){
+				$(".scroll").click(function(event){		
 					event.preventDefault();
-					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
 				});
 			});
-		</script>
-		<!-- /ends-smoth-scrolling -->
-	<!-- //here ends scrolling icon -->
-<!-- PopUp-Box-JavaScript -->
-		<script src="{% static 'js/jquery.chocolat.js' %}"></script>
-		<script type="text/javascript">
-			$(function() {
-				$('.filtr-item a').Chocolat();
-			});
-		</script>
-	<!-- //PopUp-Box-JavaScript -->
-	<!-- fliter-JavaScript -->
-		<script src="{% static 'js/jquery.filterizr.js' %}"></script>
-		<script src="{% static 'js/controls.js' %}"></script>
-		<script type="text/javascript">
-			$(function() {
-				$('.filtr-container').filterizr();
-			});
-		</script>
+</script>
+ <script type="text/javascript">
+						$(document).ready(function() {
+							/*
+							var defaults = {
+					  			containerID: 'toTop', // fading element id
+								containerHoverID: 'toTopHover', // fading element hover id
+								scrollSpeed: 1200,
+								easingType: 'linear' 
+					 		};
+							*/
+							
+							$().UItoTop({ easingType: 'easeOutQuart' });
+							
+						});
+					</script>
+<!--end-smooth-scrolling-->
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+ 
 {% endblock %}
 </body>
 </html>
