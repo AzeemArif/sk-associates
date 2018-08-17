@@ -2238,3 +2238,12 @@ h3.follow {
 	color: white;
 	font-weight: bold;
 }
+.text-color {
+	color: white;
+}
+#id_Message {
+	resize: none;
+}
+#alert_success_id {
+	text-align: center;
+}
