@@ -2233,9 +2233,9 @@ h3.follow {
 	color: white;
 	font-weight: bold;
 }
-.custom-buttons.button:hover{
-	background-color: darkblue;
-	color: white;
+.custom-buttons:hover, .custom-buttons:focus{
+	background-color: white !important;
+	color: #C70039!important;
 	font-weight: bold;
 }
 .text-color {
@@ -2246,4 +2246,9 @@ h3.follow {
 }
 #alert_success_id {
 	text-align: center;
+}
+.zs-bullets .active{
+	background: #C70039 !important;
+	border: #C70039 !important;
+
 }
