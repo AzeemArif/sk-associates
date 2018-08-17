@@ -239,118 +239,37 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="gallery agile" id="gallery">
 		<div class="container">
 			<h3 class="tittle"> Our <span>Gallery</span></h3>
+            <div class="col-md-offset-4">
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+
+                <button class="btn btn-default filter-button custom-buttons" data-filter="all">Show All</button>
+
+                    {% if folder_names %}
+                    {% for names in folder_names %}
+                        <button class="btn btn-default filter-button custom-buttons" data-filter="{{ names.title }}">{{ names.title }}</button>
+                    {% endfor %}
+                {% endif %}
+                </ul>
+            </div>
+
 			<div class="agile_gallery_grids w3-agile">
 				<ul class="clearfix demo">
-					<li>
-						<div class="gallery-grid1">
-							<img src="{% static 'images/v5.jpg' %}" alt=" " class="img-responsive" />
-							<div class="p-mask">
-									<h4>Fetch <span>Villa</span></h4>
-								<p>Neque porro quisquam est, qui dolorem ipsum.</p>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="gallery-grid1">
-							<img src="{% static 'images/v1.jpg' %}" alt=" " class="img-responsive" />
-							<div class="p-mask">
-								<h4>Fetch <span>Villa</span></h4>
-								<p>Neque porro quisquam est, qui dolorem ipsum.</p>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="gallery-grid1">
-							<img src="{% static 'images/v6.jpg' %}" alt=" " class="img-responsive" />
-							<div class="p-mask">
-							<h4>Fetch <span>Villa</span></h4>
-								<p>Neque porro quisquam est, qui dolorem ipsum.</p>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="gallery-grid1">
-							<img src="{% static 'images/v3.jpg' %}" alt=" " class="img-responsive" />
-							<div class="p-mask">
-								<h4>Fetch <span>Villa</span></h4>
-								<p>Neque porro quisquam est, qui dolorem ipsum.</p>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="gallery-grid1">
-							<img src="{% static 'images/v7.jpg' %}" alt=" " class="img-responsive" />
-							<div class="p-mask">
-									<h4>Fetch <span>Villa</span></h4>
-								<p>Neque porro quisquam est, qui dolorem ipsum.</p>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="gallery-grid1">
-							<img src="{% static 'images/v2.jpg' %}" alt=" " class="img-responsive" />
-							<div class="p-mask">
-									<h4>Fetch <span>Villa</span></h4>
-								<p>Neque porro quisquam est, qui dolorem ipsum.</p>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="gallery-grid1">
-							<img src="{% static 'images/v8.jpg' %}" alt=" " class="img-responsive" />
-							<div class="p-mask">
-									<h4>Fetch <span>Villa</span></h4>
-								<p>Neque porro quisquam est, qui dolorem ipsum.</p>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="gallery-grid1">
-							<img src="{% static 'images/v4.jpg' %}" alt=" " class="img-responsive" />
-							<div class="p-mask">
-								<h4>Fetch <span>Villa</span></h4>
-								<p>Neque porro quisquam est, qui dolorem ipsum.</p>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="gallery-grid1">
-							<img src="{% static 'images/v1.jpg' %}" alt=" " class="img-responsive" />
-							<div class="p-mask">
-									<h4>Fetch <span>Villa</span></h4>
-								<p>Neque porro quisquam est, qui dolorem ipsum.</p>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="gallery-grid1">
-							<img src="{% static 'images/v2.jpg' %}" alt=" " class="img-responsive" />
-							<div class="p-mask">
-								<h4>Fetch <span>Villa</span></h4>
-								<p>Neque porro quisquam est, qui dolorem ipsum.</p>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="gallery-grid1">
-							<img src="{% static 'images/v3.jpg' %}" alt=" " class="img-responsive" />
-							<div class="p-mask">
-									<h4>Fetch <span>Villa</span></h4>
-								<p>Neque porro quisquam est, qui dolorem ipsum.</p>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="gallery-grid1">
-							<img src="{% static 'images/v4.jpg' %}" alt=" " class="img-responsive" />
-							<div class="p-mask">
-									<h4>Fetch <span>Villa</span></h4>
-								<p>Neque porro quisquam est, qui dolorem ipsum.</p>
-							</div>
-						</div>
-					</li>
+                    {% if images %}
+                        {% for image in images %}
+                            <li>
+                                <div class="gallery-grid1">
+                                   <div class="gallery_product filter {{ image.folder.title }}">
+                                        <img src="{{ image.image.url }}" class="img-responsive">
+                                    </div>
+                                    <div class="p-mask">
+                                            <h4>Fetch <span>{{ image.image_title }}</span></h4>
+                                        <p>{{ image.image_description }}</p>
+                                    </div>
+                                </div>
+                            </li>
+                        {% endfor %}
+                    {% endif %}
 				</ul>
-			
 			</div>
 		</div>
 	</div>
@@ -362,7 +281,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				tristique bibendum. Donec rutrum sed sem quis venenatis.</p>
 			<div class="footer-contact">
 				<form action="#" method="post">
-					<input type="text" name="Email" placeholder="Enter your email to update" required=" ">
+					<input type="text" name="email" placeholder="Email" required=" ">
 					<input type="submit" value="Subscribe">
 				</form>
 			</div>
@@ -532,6 +451,35 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</script>
 <!--end-smooth-scrolling-->
 <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+    <script>
+        $(document).ready(function(){
+
+    $(".filter-button").click(function(){
+        var value = $(this).attr('data-filter');
+
+        if(value == "all")
+        {
+            //$('.filter').removeClass('hidden');
+            $('.filter').show('1000');
+        }
+        else
+        {
+//            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+//            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+            $(".filter").not('.'+value).hide('3000');
+            $('.filter').filter('.'+value).show('3000');
+
+        }
+    });
+
+    if ($(".filter-button").removeClass("active")) {
+$(this).removeClass("active");
+}
+$(this).addClass("active");
+
+});
+    </script>
  
 {% endblock %}
 </body>
