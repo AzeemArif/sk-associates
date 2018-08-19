@@ -233,31 +233,31 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                 <button class="btn btn-default filter-button custom-buttons" data-filter="all">Show All</button>
 
-                    {% if folder_names %}
-                    {% for names in folder_names %}
+                {% for names in folder_names %}
+                    {% if names %}
                         <button class="btn btn-default filter-button custom-buttons" data-filter="{{ names.title }}">{{ names.title }}</button>
-                    {% endfor %}
-                {% endif %}
+                    {% endif %}
+                {% endfor %}
                 </ul>
             </div>
 
 			<div class="agile_gallery_grids w3-agile">
 				<ul class="clearfix demo">
-                    {% if images %}
-                        {% for image in images %}
-                            <li>
-                                <div class="gallery-grid1">
-                                   <div class="gallery_product filter {{ image.folder.title }}">
-                                        <img src="{{ image.image.url }}" class="img-responsive">
-                                    </div>
-                                    <div class="p-mask">
-                                            <h4>Fetch <span>{{ image.image_title }}</span></h4>
-                                        <p>{{ image.image_description }}</p>
-                                    </div>
+                    {% for image in images %}
+                        {% if images %}
+                        <li>
+                            <div class="gallery-grid1">
+                               <div class="gallery_product filter {{ image.folder.title }}">
+                                    <img src="{{ image.image.url }}" class="img-responsive">
                                 </div>
-                            </li>
-                        {% endfor %}
-                    {% endif %}
+                                <div class="p-mask">
+                                        <h4>Fetch <span>{{ image.image_title }}</span></h4>
+                                    <p>{{ image.image_description }}</p>
+                                </div>
+                            </div>
+                        </li>
+                        {% endif %}
+                    {% endfor %}
 				</ul>
 			</div>
 		</div>
