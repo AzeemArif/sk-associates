@@ -218,9 +218,12 @@ ul.top-links li a i.fa:hover {
 }
 
 /*-- agileits --*/
-.logo h1 {
-    text-transform: uppercase;
-    font-weight: bold;
+/*.logo h1 {*/
+    /*text-transform: uppercase;*/
+    /*font-weight: bold;*/
+/*}*/
+.logo img {
+    max-width: 37%;
 }
 span.one {
 	font-family: 'Tangerine', cursive;

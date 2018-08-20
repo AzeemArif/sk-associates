@@ -59,8 +59,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<span class="icon-bar"></span>
 				  </button>
 					<div class="logo">
-						<h1><a class="navbar-brand" href="index.html"><span class="one">F</span>etch<span class="one">V</span>illa</a></h1>
-					</div>
+{#						<h1><a class="navbar-brand" href="index.html"><span class="one">F</span>etch<span class="one">V</span>illa</a></h1>#}
+					    <img src="{% static 'images/sk_logo.png' %}">
+                    </div>
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
@@ -244,7 +245,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="agile_gallery_grids w3-agile">
 				<ul class="clearfix demo">
                     {% for image in images %}
-                        {% if images %}
+                        {% if image %}
                         <li>
                             <div class="gallery-grid1">
                                <div class="gallery_product filter {{ image.folder.title }}">
