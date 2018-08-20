@@ -25,7 +25,7 @@ SECRET_KEY = '&fs5jwcd@n5uqqg#gpjj5z=7qx)8-uh5hr+hu+0szb!s*uluu@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -93,14 +93,13 @@ WSGI_APPLICATION = 'skAssociates.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'sk_db',
+        'NAME': 'sk_newdb',
         'USER': 'postgres',
         'PASSWORD': '123456',
         'HOST': 'localhost',
         'PORT': '5432',
     }
 }
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
@@ -123,9 +122,10 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR),'skAssociates/')
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR),'/media/')
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
