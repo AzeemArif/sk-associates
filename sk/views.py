@@ -34,7 +34,7 @@ class index(TemplateView):
                 subject = 'Product Support'
             message = "Name : " + name + "\n" + message + "\n" + "From :" + from_email
             try:
-                send_mail(subject, message, 'azeem.esketchers@gmail.com', ['mazeemarif0@gmail.com'],
+                send_mail(subject, message, 'directorsohaib.burraqmarketing@gmail.com', ['skassociates1600@gmail.com'],
                           fail_silently=False)
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')

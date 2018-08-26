@@ -93,7 +93,7 @@ WSGI_APPLICATION = 'skAssociates.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'sk_newdb',
+        'NAME': 'sk_db',
         'USER': 'postgres',
         'PASSWORD': '123456',
         'HOST': 'localhost',
@@ -125,12 +125,12 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR),'/media/')
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
+# STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'azeem.esketchers@gmail.com'
-EMAIL_HOST_PASSWORD = 'formanite'
+EMAIL_HOST_USER = 'directorsohaib.burraqmarketing@gmail.com'
+EMAIL_HOST_PASSWORD = 'sohaib1600'
 EMAIL_PORT = 587
