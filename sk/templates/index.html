@@ -123,7 +123,7 @@
                  <!--/about-section-->
                     <div class="about-section agileits">
                         <div class="col-md-6">
-                            <img src="{% static 'images/v7.jpg' %}" alt=" " class="img-responsive">
+                            <img src="{% static 'images/about.jpg' %}" alt=" " class="img-responsive">
                         </div>
                         <div class="col-md-6 ab-text">
 {#                                 <h4 class="tittle">About Us</h4>#}
@@ -183,8 +183,8 @@
 						  <div class="gallery-grid1">
 								<img src="{% static 'images/v5.jpg' %}" alt=" " class="img-responsive">
 								<div class="p-mask">
-										<h4>Luxury <span>Villa Design</span></h4>
-									<p>We can design luxury villas according to what you have in your mind</p>
+										<h4>Luxury <span>Restaurants</span></h4>
+									<p>We can design luxury restaurants according to what you have in your mind</p>
 								</div>
 							</div>
 					  </li>
@@ -201,8 +201,8 @@
 						   <div class="gallery-grid1">
 							<img src="{% static 'images/v6.jpg' %}" alt=" " class="img-responsive">
 							<div class="p-mask">
-									<h4>Luxury <span>Buildings</span></h4>
-								<p>With us, You can design luxury buildings with our latest and professional designs</p>
+									<h4>Grand <span>Mosque</span></h4>
+								<p>With us, You can design grand mosques with our latest and professional designs</p>
 							</div>
 						</div>
 						</li>
@@ -230,83 +230,111 @@
 	<div class="gallery agile" id="gallery">
 		<div class="container">
 			<h3 class="tittle"> Our <span>Gallery</span></h3>
-            <div class="col-md-offset-4">
-                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-
-                <button class="btn btn-default filter-button custom-buttons" data-filter="all">All</button>
-
+            <div align="center">
                 {% for names in folder_names %}
                     {% if names %}
-                        <button class="btn btn-default filter-button custom-buttons" data-filter="{{ names.title }}">{{ names.title }}</button>
+                        <button class="btn btn-default filter-button custom-buttons" data-filter="{{ names.title|cut:" " }}">{{ names.title }}</button>
                     {% endif %}
                 {% endfor %}
-                </ul>
             </div>
 
-			<div class="agile_gallery_grids w3-agile">
-				<ul class="clearfix demo">
-                    {% for image in images %}
-                        {% if image %}
-                        <li>
-                            <div class="gallery-grid1">
-                               <div class="gallery_product filter {{ image.folder.title }}">
-                                    <img src="{{ image.image.url }}" class="img-responsive">
-                                </div>
-                                <div class="p-mask">
-                                        <h4>Fetch <span>{{ image.image_title }}</span></h4>
-                                    <p>{{ image.image_description }}</p>
-                                </div>
-                            </div>
-                        </li>
-                        {% endif %}
-                    {% endfor %}
-				</ul>
-			</div>
+            <div class="gallery-grids">
+                {% for foo in images %}
+                    {% if foo %}
+                       <div class="col-md-4 gallery-grid wow fadeInUp animated filter {{ foo.folder.title|cut:" " }}" data-wow-delay=".5s">
+                        <div class="grid">
+                            <figure class="effect-apollo">
+                                <a class="example-image-link" href="{{ foo.image.url }}" data-lightbox="{{ foo.folder.title }}" data-title="">
+                                    <img src="{{ foo.image_thumbnail.url }}" alt="" />
+                                    <figcaption>
+                                        <h3>{{ foo.image_title }}</h3>
+                                        <p>{{ foo.image_description }}</p>
+                                    </figcaption>
+                                </a>
+                            </figure>
+                        </div>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+                </div>
+        <div class="clearfix"> </div>
+
+{#			<div class="agile_gallery_grids w3-agile">#}
+{#				<ul class="clearfix demo">#}
+{#                    {% for image in images %}#}
+{#                        {% if image %}#}
+{#                        <li>#}
+{#                            <div class="gallery-grid1">#}
+{#                               <div class="gallery_product filter {{ image.folder.title }}">#}
+{#                                    <img src="{{ image.image.url }}" class="img-responsive hide">#}
+{#                                   <img src="{{ image.image_thumbnail.url }}" class="img-responsive">#}
+{#                                </div>#}
+{#                                <div class="p-mask">#}
+{#                                    <h4><span>{{ image.image_title }}</span></h4>#}
+{#                                    <p>{{ image.image_description }}</p>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </li>#}
+{#                        {% endif %}#}
+{#                    {% endfor %}#}
+{#				</ul>#}
+{#			</div>#}
 		</div>
 	</div>
 
+
 <div class="contact-w3ls" id="contact">
-		<div class="container">
-    <div class="row">
-        <div class="col-md-8">
-            <div class="well well-sm">
-                <form method="post" id="contact_form">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            {{ form.Name.label_tag }}
-                                {{ form.Name }}
-                        </div>
-
-                        <div class="form-group">
-                            {{ form.Email.label_tag }}
-                            <div class="input-group">
-                             <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
-                             </span>
-                                    {{ form.Email }}
-                            </div>
-                        </div>
-                        <div class="form-group">
-                        {{ form.Subject.label_tag }}
-                                {{ form.Subject }}
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                            <div class="form-group">
-                            {{ form.Message.label_tag }}
-                                    {{ form.Message }}
-                            </div>
-                    </div>
-
-                    <div class="col-md-12">
-                        <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">
-                            Send Message</button>
-                    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="contact_us_form">
+                    <form method="post" id="contact_form">
+                        <fieldset class="form-group">
+                            {{ form.Email }}
+{#                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">#}
+                        </fieldset>
+                        <fieldset class="form-group">
+                            {{ form.Message }}
+{#                            <textarea class="form-control" id="exampleMessage" placeholder="Message"></textarea>#}
+                        </fieldset>
+                        <fieldset class="form-group text-xs-right custom-btn-contact">
+                            <button type="submit" id="btnContactUs" class="btn btn-secondary-outline btn-lg">Send Message</button>
+                        </fieldset>
+                    </form>
                 </div>
-                </form>
             </div>
-        </div>
-        <div class="col-md-4">
+{#        <div class="col-md-8">#}
+{#            <div class="well well-sm">#}
+{#                <form method="post" id="contact_form">#}
+{#                <div class="row">#}
+{#                    <div class="col-md-6">#}
+{##}
+{#                        <div class="form-group">#}
+{#                            {{ form.Email.label_tag }}#}
+{#                            <div class="input-group">#}
+{#                             <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>#}
+{#                             </span>#}
+{#                                    {{ form.Email }}#}
+{#                            </div>#}
+{#                        </div>#}
+{##}
+{#                    </div>#}
+{#                    <div class="col-md-6">#}
+{#                            <div class="form-group">#}
+{#                            {{ form.Message.label_tag }}#}
+{#                                    {{ form.Message }}#}
+{#                            </div>#}
+{#                    </div>#}
+{##}
+{#                    <div class="col-md-12">#}
+{#                        <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">#}
+{#                            Send Message</button>#}
+{#                    </div>#}
+{#                </div>#}
+{#                </form>#}
+{#            </div>#}
+{#        </div>#}
+        <div class="col-md-6">
             <form>
                 <div class="text-color">
                     <legend class="text-color"><span class="glyphicon glyphicon-globe"></span> Our office</legend>
@@ -347,13 +375,20 @@
 </div>
 
     <a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-
+<script src="{%  static 'js/lightbox-plus-jquery.min.js' %}"> </script>
+<link rel="stylesheet" href="{%  static 'css/lightbox.css' %}">
 <script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/jquery.zoomslider.min.js' %}"></script>
 		<!-- search-jQuery -->
 				<script src="{% static 'js/main.js' %}"></script>
 
     {#    Ajax Request#}
+    <script>
+            {% for foo in folder_names %}
+                $('.{{ foo.title|cut:" "  }}').hide();
+            {% endfor %}
+            $('.{{ folder_names.first.title|cut:" "  }}').show();
+    </script>
     <script>
        $('#alert_success_id').hide();
         $(document).on('submit', '#contact_form', function(e){

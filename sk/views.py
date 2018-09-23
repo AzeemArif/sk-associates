@@ -22,17 +22,10 @@ class index(TemplateView):
     def post(self, request, **kwargs):
         form = ContactForm(request.POST)
         if form.is_valid():
-            name = form.cleaned_data['Name']
-            subject = form.cleaned_data['Subject']
+            subject = "Email From skassociates.pk"
             from_email = form.cleaned_data['Email']
             message = form.cleaned_data['Message']
-            if subject == "1":
-                subject = 'General Customer Service'
-            elif subject == "2":
-                subject = 'Suggestion'
-            elif subject == "3":
-                subject = 'Product Support'
-            message = "Name : " + name + "\n" + message + "\n" + "From :" + from_email
+            message = "From : " + from_email+ "\n" + "Message: " + message + "\n"
             try:
                 send_mail(subject, message, 'directorsohaib.burraqmarketing@gmail.com', ['skassociates1600@gmail.com'],
                           fail_silently=False)
